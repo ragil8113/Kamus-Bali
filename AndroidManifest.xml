@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kamusbali"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+ <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/icon" >
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".MenuUtamaActivity"
+            android:label="@string/Menu_Utama" >
+            
+        </activity>
+        <activity
+            android:name=".KamusActivity"
+            android:label="@string/title_activity_kamus" 
+            android:parentActivityName=".MenuUtamaActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.MenuUtamaActivity" />            
+        </activity>
+        
+        <activity 
+            android:name=".PetunjukActivity"
+            android:label="@string/title_activity_petunjuk" 
+            android:parentActivityName=".MenuUtamaActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"> 
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.MenuUtamaActivity" />
+            </activity>
+            
+         <activity
+            android:name=".TentangActivity"
+            android:label="@string/title_activity_tentang" 
+            android:parentActivityName=".MenuUtamaActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.MenuUtamaActivity" />
+            </activity>
+       
+           <activity
+            android:name=".KategoriActivity"
+            android:label="@string/title_activity_kategori" 
+            android:parentActivityName="com.kamusbali.MenuUtamaActivity" 
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.MenuUtamaActivity" />
+            
+            </activity>
+            
+           
+            <activity
+            android:name=".HewanActivity"
+            android:label="@string/title_activity_hewan"
+            android:parentActivityName=".KategoriActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.KategoriActivity" />
+            
+            </activity>
+            
+            <activity
+            android:name=".BuahActivity"
+            android:label="@string/title_activity_buah" 
+            android:parentActivityName=".KategoriActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.KategoriActivity" />
+            </activity>
+             
+            <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".BuahActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.BuahActivity" />
+            </activity>
+            
+            <activity
+            android:name=".Detail1Activity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".HewanActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamusbali.HewanActivity" />
+            </activity>
+            
+             <activity android:name=".SQLHelperKamus"></activity>
+             <activity android:name=".Keluar"></activity>
+           
+             <activity android:name=".SQLHelperKategori"></activity>
+               
+         
+    </application>
+
+</manifest>
